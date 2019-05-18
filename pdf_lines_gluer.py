@@ -107,7 +107,7 @@ def _preprocess_pdf(text: str, clf, v) -> str:
             corrected_acc.append(line)
         else:
             prev_line = corrected_acc[-1]
-            if prev_line[-1] in _HYPHEN_CHARS:
+            if prev_line != '' and prev_line[-1] in _HYPHEN_CHARS:
                 corrected_acc[-1] = prev_line[:-1]
             else:
                 corrected_acc[-1] += ' '
