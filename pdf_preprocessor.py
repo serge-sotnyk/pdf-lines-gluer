@@ -1,29 +1,31 @@
 import string
 from typing import List, Dict
 
-# This code was automatically generated at 2019-05-20 14:25:48.928633
+# This code was automatically generated at 2019-06-21 11:25:37.215412
 
 from sklearn.linear_model import LogisticRegression
 from sklearn.feature_extraction import DictVectorizer
 from numpy import array
 
 _clf = LogisticRegression()
-_clf.coef_ = array([[-1.98476537, -0.574191  ,  0.23003166,  0.22442564, -0.17128219,
-         0.35692281,  1.08296874, -0.29254168, -0.86373763, -0.64891859,
-         0.52238215, -0.95513122,  0.64648898, -1.92479586,  0.72445132,
-        -0.14225727,  0.21422565,  0.39098398, -0.73026064, -1.19914687,
-        -0.2767895 ,  0.        , -1.52567924, -0.45360343,  0.46024434,
-        -0.4957314 , -1.68586662,  0.34014256,  0.21487248,  0.        ,
-         1.37223976, -0.05350732, -0.14732666,  1.64406728,  0.90695969,
-         0.48877281,  0.18663683, -0.51551458,  2.54937969,  0.        ,
-         0.        ,  0.        ,  0.03302935,  0.04662906, -0.53539238,
-        -1.54945831,  0.01135887]])
+_clf.coef_ = array([[-3.09925498, -1.2233267 ,  0.11772731,  0.11320903, -0.61476615,
+         0.16965524,  0.74448574, -0.04194057, -1.35630572, -0.24676336,
+         0.41220109, -0.35504167,  0.92710423, -2.1255104 ,  0.08247018,
+         0.73824089,  0.31262326,  0.41799742, -0.60178821, -0.33976708,
+        -0.03794846,  0.        , -0.91812391, -0.2121092 ,  0.19453728,
+        -0.60672439, -0.92668671,  0.12330509,  0.04666124,  0.        ,
+         1.68901669, -0.67069155, -0.45640558,  1.05191066,  1.03483933,
+         0.73240274,  0.17867271, -0.07407496,  2.06098403,  0.42573062,
+        -0.38634422,  0.7109839 , -0.02934711,  0.05490663,  0.02008552,
+         0.05069223,  0.        ,  0.2016651 , -0.28770706, -0.88722735,
+        -0.26507582,  0.52628048, -1.28404466, -1.96447254,  0.07607324,
+         0.70359565,  0.35094977,  0.01376572]])
 _clf.classes_ = array([False,  True])
-_clf.intercept_ = [-2.08485069]
+_clf.intercept_ = [-2.75918545]
 
 _v = DictVectorizer()
-_v.feature_names_ = ['first_chars= ', 'first_chars="a', "first_chars=' ", "first_chars='A", 'first_chars=(0', 'first_chars=(A', 'first_chars=(a', 'first_chars=)]', 'first_chars=, ', 'first_chars=. ', 'first_chars=0', 'first_chars=0 ', 'first_chars=0,', 'first_chars=0.', 'first_chars=00', 'first_chars=0:', 'first_chars=0\\', 'first_chars=@', 'first_chars=A', 'first_chars=A ', 'first_chars=A,', 'first_chars=A-', 'first_chars=A.', 'first_chars=A0', 'first_chars=A=', 'first_chars=AA', 'first_chars=Aa', 'first_chars=[0', 'first_chars=[A', 'first_chars=[a', 'first_chars=\\A', 'first_chars=a ', 'first_chars=a(', 'first_chars=a-', 'first_chars=a.', 'first_chars=a0', 'first_chars=aA', 'first_chars=a[', 'first_chars=aa', 'isalpha', 'isdigit', 'islower', 'mean_len', 'prev_len', 'punct= ', 'punct=.', 'this_len']
-_v.vocabulary_ = {'first_chars= ': 0, 'first_chars="a': 1, "first_chars=' ": 2, "first_chars='A": 3, 'first_chars=(0': 4, 'first_chars=(A': 5, 'first_chars=(a': 6, 'first_chars=)]': 7, 'first_chars=, ': 8, 'first_chars=. ': 9, 'first_chars=0': 10, 'first_chars=0 ': 11, 'first_chars=0,': 12, 'first_chars=0.': 13, 'first_chars=00': 14, 'first_chars=0:': 15, 'first_chars=0\\': 16, 'first_chars=@': 17, 'first_chars=A': 18, 'first_chars=A ': 19, 'first_chars=A,': 20, 'first_chars=A-': 21, 'first_chars=A.': 22, 'first_chars=A0': 23, 'first_chars=A=': 24, 'first_chars=AA': 25, 'first_chars=Aa': 26, 'first_chars=[0': 27, 'first_chars=[A': 28, 'first_chars=[a': 29, 'first_chars=\\A': 30, 'first_chars=a ': 31, 'first_chars=a(': 32, 'first_chars=a-': 33, 'first_chars=a.': 34, 'first_chars=a0': 35, 'first_chars=aA': 36, 'first_chars=a[': 37, 'first_chars=aa': 38, 'isalpha': 39, 'isdigit': 40, 'islower': 41, 'mean_len': 42, 'prev_len': 43, 'punct= ': 44, 'punct=.': 45, 'this_len': 46}
+_v.feature_names_ = ['first_chars= ', 'first_chars="a', "first_chars=' ", "first_chars='A", 'first_chars=(0', 'first_chars=(A', 'first_chars=(a', 'first_chars=)]', 'first_chars=, ', 'first_chars=. ', 'first_chars=0', 'first_chars=0 ', 'first_chars=0,', 'first_chars=0.', 'first_chars=00', 'first_chars=0:', 'first_chars=0\\', 'first_chars=@', 'first_chars=A', 'first_chars=A ', 'first_chars=A,', 'first_chars=A-', 'first_chars=A.', 'first_chars=A0', 'first_chars=A=', 'first_chars=AA', 'first_chars=Aa', 'first_chars=[0', 'first_chars=[A', 'first_chars=[a', 'first_chars=\\A', 'first_chars=a ', 'first_chars=a(', 'first_chars=a-', 'first_chars=a.', 'first_chars=a0', 'first_chars=aA', 'first_chars=a[', 'first_chars=aa', 'isalpha', 'isdigit', 'islower', 'mean_len', 'prev_len', 'punct= ', 'punct="', 'punct=%', 'punct=(', 'punct=)', 'punct=*', 'punct=,', 'punct=-', 'punct=.', 'punct=:', 'punct=;', 'punct=@', 'punct=]', 'this_len']
+_v.vocabulary_ = {'first_chars= ': 0, 'first_chars="a': 1, "first_chars=' ": 2, "first_chars='A": 3, 'first_chars=(0': 4, 'first_chars=(A': 5, 'first_chars=(a': 6, 'first_chars=)]': 7, 'first_chars=, ': 8, 'first_chars=. ': 9, 'first_chars=0': 10, 'first_chars=0 ': 11, 'first_chars=0,': 12, 'first_chars=0.': 13, 'first_chars=00': 14, 'first_chars=0:': 15, 'first_chars=0\\': 16, 'first_chars=@': 17, 'first_chars=A': 18, 'first_chars=A ': 19, 'first_chars=A,': 20, 'first_chars=A-': 21, 'first_chars=A.': 22, 'first_chars=A0': 23, 'first_chars=A=': 24, 'first_chars=AA': 25, 'first_chars=Aa': 26, 'first_chars=[0': 27, 'first_chars=[A': 28, 'first_chars=[a': 29, 'first_chars=\\A': 30, 'first_chars=a ': 31, 'first_chars=a(': 32, 'first_chars=a-': 33, 'first_chars=a.': 34, 'first_chars=a0': 35, 'first_chars=aA': 36, 'first_chars=a[': 37, 'first_chars=aa': 38, 'isalpha': 39, 'isdigit': 40, 'islower': 41, 'mean_len': 42, 'prev_len': 43, 'punct= ': 44, 'punct="': 45, 'punct=%': 46, 'punct=(': 47, 'punct=)': 48, 'punct=*': 49, 'punct=,': 50, 'punct=-': 51, 'punct=.': 52, 'punct=:': 53, 'punct=;': 54, 'punct=@': 55, 'punct=]': 56, 'this_len': 57}
 
 
 def preprocess_pdf(text: str) -> str:
@@ -74,13 +76,13 @@ def _first_chars(line: str) -> str:
     return ''.join(res)
 
 
-def _line_to_features(line: str, i: int, lines: List[str]) -> Dict[str, object]:
+def _line_to_features(line: str, i: int, lines: List[str], annotated: bool) -> Dict[str, object]:
     features = {}
     this_len = len(line)
     mean_len = _mean_in_window(lines, i)
-    if i > 1:
-        prev_len = len(lines[-1]) - 1
-        l_char = _last_char(lines[-1])
+    if i > 0:
+        prev_len = len(lines[i-1]) - (1 if annotated else 0)
+        l_char = _last_char(lines[i-1])
     else:
         prev_len = 0
         l_char = ' '
@@ -101,7 +103,7 @@ def _featurize_text_with_annotation(text: str) -> (List[object], List[bool]):
     for i, line in enumerate(lines):
         y.append(line[0] == '+')  # True, if line should be glued with previous
         line = line[1:]
-        x.append(_line_to_features(line, i, lines))
+        x.append(_line_to_features(line, i, lines, True))
     return x, y
 
 
@@ -117,7 +119,7 @@ def _preprocess_pdf(text: str, clf, v) -> str:
     lines = [s.strip() for s in text.strip().splitlines()]
     x = []
     for i, line in enumerate(lines):
-        x.append(_line_to_features(line, i, lines))
+        x.append(_line_to_features(line, i, lines, False))
     if not x:
         return ''
     

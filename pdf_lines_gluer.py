@@ -45,13 +45,13 @@ def _first_chars(line: str) -> str:
     return ''.join(res)
 
 
-def _line_to_features(line: str, i: int, lines: List[str]) -> Dict[str, object]:
+def _line_to_features(line: str, i: int, lines: List[str], annotated: bool) -> Dict[str, object]:
     features = {}
     this_len = len(line)
     mean_len = _mean_in_window(lines, i)
-    if i > 1:
-        prev_len = len(lines[-1]) - 1
-        l_char = _last_char(lines[-1])
+    if i > 0:
+        prev_len = len(lines[i-1]) - (1 if annotated else 0)
+        l_char = _last_char(lines[i-1])
     else:
         prev_len = 0
         l_char = ' '
@@ -72,7 +72,7 @@ def _featurize_text_with_annotation(text: str) -> (List[object], List[bool]):
     for i, line in enumerate(lines):
         y.append(line[0] == '+')  # True, if line should be glued with previous
         line = line[1:]
-        x.append(_line_to_features(line, i, lines))
+        x.append(_line_to_features(line, i, lines, True))
     return x, y
 
 
@@ -88,7 +88,7 @@ def _preprocess_pdf(text: str, clf, v) -> str:
     lines = [s.strip() for s in text.strip().splitlines()]
     x = []
     for i, line in enumerate(lines):
-        x.append(_line_to_features(line, i, lines))
+        x.append(_line_to_features(line, i, lines, False))
     if not x:
         return ''
     
